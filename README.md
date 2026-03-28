@@ -1,5 +1,8 @@
 # Scouts BSA AI Merit Badge Workshop
 
+[Short link to this repo](https://tinyurl.com/scoutsai)
+tinyurl.com/scoutsai
+
 A hands-on, 1-hour workshop that teaches AI concepts using Databricks Free Edition and Pokemon data.
 
 ## What Scouts Will Learn
