@@ -3,6 +3,9 @@
 [Short link to this repo](https://tinyurl.com/scoutsai)
 tinyurl.com/scoutsai
 
+[Sign up for Databricks Free](https://tinyurl.com/databricksfree)
+tinyurl.com/databricksfree
+
 A hands-on, 1-hour workshop that teaches AI concepts using Databricks Free Edition and Pokemon data.
 
 ## What Scouts Will Learn
