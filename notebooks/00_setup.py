@@ -13,6 +13,23 @@ workspace_catalog = spark.sql("SELECT current_catalog()").first()[0]
 print(f"Using catalog: {workspace_catalog}")
 
 # COMMAND ----------
+import os, shutil
+
+# Derive the repo root from this notebook's path, then copy pokemon.csv into the volume
+notebook_path = dbutils.notebook.entry_point.getDbutils().notebook().getContext().notebookPath().get()
+repo_root = os.path.dirname(os.path.dirname(notebook_path))  # up from notebooks/
+csv_source = f"/Workspace{repo_root}/data/pokemon.csv"
+csv_dest   = f"/Volumes/{workspace_catalog}/default/workshop_data/pokemon.csv"
+
+# Create the volume if it doesn't already exist
+spark.sql(f"CREATE VOLUME IF NOT EXISTS {workspace_catalog}.default.workshop_data")
+print("✓ Volume ready")
+
+# Copy the CSV from the repo into the volume
+shutil.copy(csv_source, csv_dest)
+print(f"✓ Copied pokemon.csv to volume")
+
+# COMMAND ----------
 # Create Delta table from CSV in Volume
 # read_files handles header detection and type inference automatically
 spark.sql(f"""
