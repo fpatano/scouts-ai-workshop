@@ -45,25 +45,11 @@ Each Scout needs:
 
 ## Instructor Setup
 
-### Option A: Deploy to each Scout's workspace (recommended)
-
-```bash
-git clone https://github.com/YOUR_USER/scouts-ai-workshop.git
-cd scouts-ai-workshop/setup
-pip install -r requirements.txt
-
-# For each Scout workspace:
-export DATABRICKS_HOST="https://their-workspace.cloud.databricks.com"
-export DATABRICKS_TOKEN="dapi..."
-python deploy_to_workspace.py
-```
-
-### Option B: Scout self-service via Git Folder
-
 1. Make this repo public on GitHub
 2. Each Scout: Workspace > New > Git Folder > paste the repo URL
 3. Scout opens `notebooks/00_setup.py` and clicks Run All
 4. The setup notebook auto-detects whether data is in a Volume or workspace files
+5. Each Scout opens '01_pokemon_ai_lab' and reads and executes each cell by clicking the play button in the top right corner of each notebook cell. 
 
 ## Repo Structure
 
