@@ -4,8 +4,10 @@
 # MAGIC %md
 # MAGIC ## Before you start -- connect to the Serverless SQL Warehouse
 # MAGIC
-# MAGIC 1. Click the compute selector in the toolbar at the top of the page (it may say **"Connect"** or show a cluster name)
-# MAGIC 2. Select **Serverless Starter Warehouse** from the dropdown
+# MAGIC ![Select Serverless Starter Warehouse](images/select-serverless-warehouse.png)
+# MAGIC
+# MAGIC 1. Click the compute selector in the toolbar at the top of the page (it may say **"Serverless"** or show a cluster name)
+# MAGIC 2. Select **Serverless Starter Warehouse** (labeled **SQL**, 2X-Small) from the dropdown
 # MAGIC 3. Once the green dot appears next to it, click **Run all**
 # MAGIC
 # MAGIC > **Why?** AI functions like `ai_classify()` run on a SQL Warehouse, not a regular cluster.
