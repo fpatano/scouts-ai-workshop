@@ -1,5 +1,7 @@
 # Scouts BSA AI Merit Badge Workshop
 
+![Scouts AI Workshop on Databricks](images/scouts_ai_workshop_databricks.png)
+
 [Short link to this repo](https://tinyurl.com/scoutsai)
 tinyurl.com/scoutsai
 
