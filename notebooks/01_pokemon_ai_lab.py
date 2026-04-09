@@ -1,26 +1,16 @@
 # Databricks notebook source
 
 # COMMAND ----------
-import base64, os
-notebook_path = dbutils.notebook.entry_point.getDbutils().notebook().getContext().notebookPath().get()
-repo_root = '/Workspace' + '/'.join(notebook_path.split('/')[:-2])
-img_path = os.path.join(repo_root, 'images', 'select-serverless-warehouse.png')
-with open(img_path, 'rb') as f:
-    img_b64 = base64.b64encode(f.read()).decode()
-displayHTML(f'''
-<div style='font-family:sans-serif;padding:16px;border:1px solid #ddd;border-radius:8px;margin-bottom:16px;'>
-  <h2 style='margin-top:0'>&#9881; Before you start &mdash; connect to the Serverless SQL Warehouse</h2>
-  <img src='data:image/png;base64,{img_b64}' style='max-width:500px;border-radius:6px;margin:12px 0;display:block;'/>
-  <ol>
-    <li>Click the compute selector in the toolbar at the top of the page (it may say <strong>"Serverless"</strong> or show a cluster name)</li>
-    <li>Select <strong>Serverless Starter Warehouse</strong> (labeled <em>SQL</em>, 2X-Small) from the dropdown</li>
-    <li>Once the green dot appears next to it, click <strong>Run all</strong></li>
-  </ol>
-  <blockquote style='color:#555;border-left:4px solid #ccc;padding-left:12px;'>
-    <strong>Why?</strong> AI functions like <code>ai_classify()</code> run on a SQL Warehouse, not a regular cluster.
-  </blockquote>
-</div>
-''')
+# MAGIC %md
+# MAGIC ## Before you start -- connect to the Serverless SQL Warehouse
+# MAGIC
+# MAGIC ![Select Serverless Starter Warehouse](../images/select-serverless-warehouse.png)
+# MAGIC
+# MAGIC 1. Click the compute selector in the toolbar at the top of the page (it may say **"Serverless"** or show a cluster name)
+# MAGIC 2. Select **Serverless Starter Warehouse** (labeled **SQL**, 2X-Small) from the dropdown
+# MAGIC 3. Once the green dot appears next to it, click **Run all**
+# MAGIC
+# MAGIC > **Why?** AI functions like `ai_classify()` run on a SQL Warehouse, not a regular cluster.
 
 # COMMAND ----------
 # MAGIC %md
